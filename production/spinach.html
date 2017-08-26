@@ -293,13 +293,13 @@
 		$(function() {
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_temp.php',								
+					url : 'spinach_temp.php',								
 					data: {
 						'from' : U_Mon,
 						'to'   : U_Sun
 					},
 					success: function(data) {
-						console.log(data);
+						//console.log(data);
 						var obj = JSON.parse(data);
 						max = Math.max.apply(Math,obj.dataList.map(function(o){return o.value;}));
 						min = Math.min.apply(Math,obj.dataList.map(function(o){return o.value;}));
@@ -312,7 +312,7 @@
 		function humi_spinach(){
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_humi.php',								
+					url : 'spinach_humi.php',								
 					data: {
 						'from' : U_Mon,
 						'to'   : U_Sun
@@ -331,7 +331,7 @@
 		function CO2_spinach(){		
 					$.ajax({
 						type : 'POST',
-						url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_CO2.php',								
+						url : 'spinach_CO2.php',								
 						data: {
 							'from' : U_Mon,
 							'to'   : U_Sun
@@ -350,7 +350,7 @@
 		function light_spinach() {
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_light.php',								
+					url : 'spinach_light.php',								
 					data: {
 						'from' : U_Mon,
 						'to'   : U_Sun
@@ -386,7 +386,7 @@
 		$(function() {
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_temp.php',								
+					url : 'spinach_temp.php',								
 					data: {
 						'from' : U_Mon,
 						'to'   : U_Sun
@@ -405,7 +405,7 @@
 				});
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_humi.php',								
+					url : 'spinach_humi.php',								
 					data: {
 						'from' : U_Mon,
 						'to'   : U_Sun
@@ -423,7 +423,7 @@
 				});
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_CO2.php',								
+					url : 'spinach_CO2.php',								
 					data: {
 						'from' : U_Mon,
 						'to'   : U_Sun
@@ -441,7 +441,7 @@
 				});
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_light.php',								
+					url : 'spinach_light.php',								
 					data: {
 						'from' : U_Mon,
 						'to'   : U_Sun
@@ -625,7 +625,7 @@
 				//console.log(toEpoch);
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_temp.php',								
+					url : 'spinach_temp.php',								
 					data: {
 						'from' : fromEpoch,
 						'to'   : toEpoch
@@ -650,7 +650,7 @@
 				var toEpoch = toDate.getTime();
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_temp.php',								
+					url : 'spinach_temp.php',								
 					data: {
 						'from' : fromEpoch,
 						'to'   : toEpoch
@@ -695,7 +695,7 @@
 				//console.log("-------");
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_humi.php',								
+					url : 'spinach_humi.php',								
 					data: {
 						'from' : fromEpoch,
 						'to'   : toEpoch
@@ -704,8 +704,8 @@
 						//console.log(data);
 						$.getScript('../build/js/spinach_humi.js', function () {  
 						draw(data);
-						default_CO2();
 						}); 
+						default_CO2();
 					}
 					
 				});
@@ -720,7 +720,7 @@
 				var toEpoch = toDate.getTime();
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_humi.php',								
+					url : 'spinach_humi.php',								
 					data: {
 						'from' : fromEpoch,
 						'to'   : toEpoch
@@ -762,7 +762,7 @@
 				//console.log(toEpoch);
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_CO2.php',								
+					url : 'spinach_CO2.php',								
 					data: {
 						'from' : fromEpoch,
 						'to'   : toEpoch
@@ -787,7 +787,7 @@
 				var toEpoch = toDate.getTime();
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_CO2.php',								
+					url : 'spinach_CO2.php',								
 					data: {
 						'from' : fromEpoch,
 						'to'   : toEpoch
@@ -829,7 +829,7 @@
 				//console.log(toEpoch);
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_light.php',								
+					url : 'spinach_light.php',								
 					data: {
 						'from' : fromEpoch,
 						'to'   : toEpoch
@@ -854,7 +854,7 @@
 				var toEpoch = toDate.getTime();
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_light.php',								
+					url : 'spinach_light.php',								
 					data: {
 						'from' : fromEpoch,
 						'to'   : toEpoch
@@ -896,7 +896,7 @@
 				//console.log(toEpoch);
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_voltage.php',								
+					url : 'spinach_voltage.php',								
 					data: {
 						'from' : fromEpoch,
 						'to'   : toEpoch
@@ -920,7 +920,7 @@
 				var toEpoch = toDate.getTime();
 				$.ajax({
 					type : 'POST',
-					url : 'http://people.cs.nctu.edu.tw/~tlchou/test/gentelella-master/gentelella-master/production/spinach_voltage.php',								
+					url : 'spinach_voltage.php',								
 					data: {
 						'from' : fromEpoch,
 						'to'   : toEpoch
