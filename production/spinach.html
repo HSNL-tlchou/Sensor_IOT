@@ -13,6 +13,11 @@
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font Awesome v4.7 -->
+    <link href="../vendors/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Weather icon -->
+	<link href="../vendors/weather-icons-master/css/weather-icons.min.css" rel="stylesheet">
+	<link href="../vendors/weather-icons-master/css/weather-icons-wind.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
@@ -49,7 +54,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Tlchou</h2>
+                <h2>Guest</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -59,7 +64,7 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <h3>General</h3>
+                <h3></h3>
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-tachometer"></i> 儀錶板 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
@@ -115,14 +120,14 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/hello.jpg" alt="">Tlchou
+                    <img src="images/hello.jpg" alt="">Guest
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="javascript:;"> Profile</a></li>
                     <li>
                       <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
+                        <!-- <span class="badge bg-red pull-right">50%</span> -->
                         <span>Settings</span>
                       </a>
                     </li>
@@ -194,78 +199,78 @@
           <!-- top tiles -->
           <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-thermometer-empty"></i> Highest Temperature</span>
-              <span><div class="count" id="high_temp">
-			  </div></span>
+              <span class="count_top"><i class="fa fa-thermometer-full"></i> Highest Temperature</span>
+              <div class="count" id="high_temp">
+			  </div>
               <!-- <span class="count_bottom"><i class="green">4% </i> From last Week</span> -->
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Average Temperature</span>
+              <span class="count_top"><i class="fa fa-thermometer-half"></i> Average Temperature</span>
               <div class="count" id="mid_temp"></div>
               <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span> -->
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Lowest Temperature</span>
+              <span class="count_top"><i class="fa fa-thermometer-empty"></i> Lowest Temperature</span>
               <div class="count" id="low_temp">
 			  </div>
               <!-- <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span> -->
             </div>
 			<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-thermometer-empty"></i> Highest Humidity</span>
+              <span class="count_top"><i class="wi wi-humidity"></i> Highest Humidity</span>
               <div class="count" id="high_humi">
 			  </div>
               <!-- <span class="count_bottom"><i class="green">4% </i> From last Week</span> -->
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Average Humidity</span>
+              <span class="count_top"><i class="wi wi-humidity"></i> Average Humidity</span>
               <div class="count" id="mid_humi">
 			  </div>
               <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span> -->
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Lowest Humidity</span>
+              <span class="count_top"><i class="wi wi-humidity"></i> Lowest Humidity</span>
               <div class="count" id="low_humi">
 			  </div>
               <!-- <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span> -->
             </div>
 			<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-thermometer-empty"></i> Highest CO2</span>
+              <span class="count_top"><i class="wi wi-barometer"></i> Highest CO2</span>
               <div class="count" id="high_CO2">
 			  </div>
               <!-- <span class="count_bottom"><i class="green">4% </i> From last Week</span> -->
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Average CO2</span>
+              <span class="count_top"><i class="wi wi-barometer"></i> Average CO2</span>
               <div class="count" id="mid_CO2">
 			  </div>
               <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span> -->
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Lowest CO2</span>
+              <span class="count_top"><i class="wi wi-barometer"></i> Lowest CO2</span>
               <div class="count" id="low_CO2">
 			  </div>
               <!-- <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span> -->
             </div>
 			<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-thermometer-empty"></i> Highest Light</span>
+              <span class="count_top"><i class="wi wi-day-sunny"></i> Highest Light</span>
               <div class="count" id="high_light">
 			  </div>
               <!-- <span class="count_bottom"><i class="green">4% </i> From last Week</span> -->
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Average Light</span>
+              <span class="count_top"><i class="wi wi-horizon-alt"></i> Average Light</span>
               <div class="count" id="mid_light">
 			  </div>
               <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span> -->
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Lowest Light</span>
+              <span class="count_top"><i class="wi wi-horizon"></i> Lowest Light</span>
               <div class="count" id="low_light">
 			  </div>
               <!-- <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span> -->
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
+              <span class="count_top"><i class="fa fa-file"></i> Total Collections</span>
                <div class="count" id="size">
 			  </div>
               <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span> -->
