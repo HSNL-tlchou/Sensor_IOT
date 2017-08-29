@@ -3,7 +3,19 @@ header('Access-Control-Allow-Origin: *');
 if($_SERVER['REQUEST_METHOD'] == "POST"){
 	$from =@$_POST['from'];
 	$to = @$_POST['to'];
-	echo httpGet("smartfarm.ap-northeast-1.elasticbeanstalk.com/api/v1/sensors/e1f84974-9d57-4918-9979-72b560c92a0b/data?",$from,$to);
+	$type = @$_POST['type'];
+	if($type == 'C1'){
+		echo httpGet("smartfarm.ap-northeast-1.elasticbeanstalk.com/api/v1/sensors/e1f84974-9d57-4918-9979-72b560c92a0b/data?",$from,$to);
+	}
+	else if ($type == "C2"){
+		echo httpGet("smartfarm.ap-northeast-1.elasticbeanstalk.com/api/v1/sensors/5551fb57-8166-48aa-b818-e6c87d500162/data?",$from,$to);	
+	}
+	else if ($type == "C4"){
+		echo httpGet("smartfarm.ap-northeast-1.elasticbeanstalk.com/api/v1/sensors/ce2c4edd-9930-4189-8632-df264a90cd73/data?",$from,$to);	
+	}
+	else {
+		echo "nothing!!!";
+	}
 }
 		
 		

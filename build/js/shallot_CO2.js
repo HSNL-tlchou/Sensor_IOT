@@ -28,7 +28,7 @@ $(document).ready(function(){
 				labels: time,
 				datasets : [
 					{
-						label: "Soil Humidity",
+						label: "CO2",
 						backgroundColor: "rgba(150, 202, 89, 0.12)",
 						borderColor: "rgba(150, 202, 89, 0.9)",
 						pointBorderColor: "rgba(150, 202, 89, 0.9)",

@@ -13,7 +13,7 @@
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<!-- Font Awesome v4.7 -->
+    <!-- Font Awesome v4.7 -->
     <link href="../vendors/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Weather icon -->
 	<link href="../vendors/weather-icons-master/css/weather-icons.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="spinach.html" class="site_title"><i class="fa fa-bug"></i> <span> IoT Sensor!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-bug"></i> <span> IoT Sensor!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -54,7 +54,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Guest</h2>
+                <h2>Tlchou</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -64,7 +64,7 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <h3></h3>
+                <h3>General</h3>
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-tachometer"></i> 儀錶板 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
@@ -126,14 +126,14 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/hello.jpg" alt="">Guest
+                    <img src="images/hello.jpg" alt="">Tlchou
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="javascript:;"> Profile</a></li>
                     <li>
                       <a href="javascript:;">
-                        <!-- <span class="badge bg-red pull-right">50%</span> -->
+                        <span class="badge bg-red pull-right">50%</span>
                         <span>Settings</span>
                       </a>
                     </li>
@@ -240,54 +240,19 @@
               <!-- <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span> -->
             </div>
 			<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="wi wi-barometer"></i> Highest CO2</span>
-              <div class="count" id="high_CO2">
-			  </div>
-              <!-- <span class="count_bottom"><i class="green">4% </i> From last Week</span> -->
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="wi wi-barometer"></i> Average CO2</span>
-              <div class="count" id="mid_CO2">
-			  </div>
-              <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span> -->
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="wi wi-barometer"></i> Lowest CO2</span>
-              <div class="count" id="low_CO2">
+              <span class="count_top"><i class="fa fa-file"></i> Total Collection</span>
+              <div class="count" id="size">
 			  </div>
               <!-- <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span> -->
-            </div>
-			<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="wi wi-day-sunny"></i> Highest Light</span>
-              <div class="count" id="high_light">
-			  </div>
-              <!-- <span class="count_bottom"><i class="green">4% </i> From last Week</span> -->
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="wi wi-horizon-alt"></i> Average Light</span>
-              <div class="count" id="mid_light">
-			  </div>
-              <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span> -->
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="wi wi-horizon"></i> Lowest Light</span>
-              <div class="count" id="low_light">
-			  </div>
-              <!-- <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span> -->
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-file"></i> Total Collections</span>
-               <div class="count" id="size">
-			  </div>
-              <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span> -->
             </div>
           </div>
           <!-- /top tiles -->
-			<!--get the highest/lowest temperature/humi/CO2/Light of this week-->
+		  
+		  <!--get the highest/lowest temperature/humi/CO2/Light of this week-->
 		 <script type="text/javascript">
 		 var max;
 		 var min;
-		function getMonday(d) {
+		/*function getMonday(d) {
 		  d = new Date(d);
 		  var day = d.getDay(),
 			  diff = d.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
@@ -300,13 +265,18 @@
 		Mon.setMilliseconds(0);
 		var U_Mon = Mon.getTime();
 		var U_Sun = U_Mon + 604799999;
+		U_Mon /= 1000;
+		U_Sun /= 1000;*/
+		U_Mon = 1490544000;
+		U_Sun = 1490976000;
 		$(function() {
 				$.ajax({
 					type : 'POST',
-					url : 'shallot_temp.php',								
+					url : 'factory_temp.php',								
 					data: {
 						'from' : U_Mon,
-						'to'   : U_Sun
+						'to'   : U_Sun,
+						'type' : 'C4'
 					},
 					success: function(data) {
 						//console.log(data);
@@ -315,14 +285,19 @@
 						min = Math.min.apply(Math,obj.dataList.map(function(o){return o.value;}));
 						document.getElementById("high_temp").innerHTML = window.max.toFixed(2);
 						document.getElementById("low_temp").innerHTML = window.min.toFixed(2);
+						humi_HL();
 					}
 				});
+				
+		});
+		function humi_HL(){
 				$.ajax({
 					type : 'POST',
-					url : 'shallot_humi.php',								
+					url : 'factory_humi.php',								
 					data: {
 						'from' : U_Mon,
-						'to'   : U_Sun
+						'to'   : U_Sun,
+						'type' : 'C4'
 					},
 					success: function(data) {
 						//console.log(data);
@@ -333,46 +308,13 @@
 						document.getElementById("low_humi").innerHTML = window.min.toFixed(2);
 					}
 				});
-				$.ajax({
-					type : 'POST',
-					url : 'shallot_CO2.php',								
-					data: {
-						'from' : U_Mon,
-						'to'   : U_Sun
-					},
-					success: function(data) {
-						//console.log(data);
-						var obj = JSON.parse(data);
-						max = Math.max.apply(Math,obj.dataList.map(function(o){return o.value;}));
-						min = Math.min.apply(Math,obj.dataList.map(function(o){return o.value;}));
-						document.getElementById("high_CO2").innerHTML = window.max;
-						document.getElementById("low_CO2").innerHTML = window.min;
-					}
-				});
-				$.ajax({
-					type : 'POST',
-					url : 'shallot_light.php',								
-					data: {
-						'from' : U_Mon,
-						'to'   : U_Sun
-					},
-					success: function(data) {
-						//console.log(data);
-						var obj = JSON.parse(data);
-						max = Math.max.apply(Math,obj.dataList.map(function(o){return o.value;}));
-						min = Math.min.apply(Math,obj.dataList.map(function(o){return o.value;}));
-						document.getElementById("high_light").innerHTML = window.max;
-						document.getElementById("low_light").innerHTML = window.min;
-					}
-				});
-				
-		});
+		}
 		</script> 
 		<!--/get the highest temperature/humi of this week-->  
 		<!--get the average temperature/humi of this week-->
 		 <script type="text/javascript">
 		 var mid,size;
-		function getMonday(d) {
+		/*function getMonday(d) {
 		  d = new Date(d);
 		  var day = d.getDay(),
 			  diff = d.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
@@ -385,13 +327,18 @@
 		Mon.setMilliseconds(0);
 		var U_Mon = Mon.getTime();
 		var U_Sun = U_Mon + 604799999;
+		U_Mon /= 1000;
+		U_Sun /= 1000;*/
+		U_Mon = 1490544000;
+		U_Sun = 1490976000;
 		$(function() {
 				$.ajax({
 					type : 'POST',
-					url : 'shallot_temp.php',								
+					url : 'factory_temp.php',								
 					data: {
 						'from' : U_Mon,
-						'to'   : U_Sun
+						'to'   : U_Sun,
+						'type' : 'C4'
 					},
 					success: function(data) {
 						var sum = 0;
@@ -403,14 +350,18 @@
 						mid = sum / size;
 						document.getElementById("mid_temp").innerHTML = window.mid.toFixed(2);
 						document.getElementById("size").innerHTML = window.size;
+						humi_mid();
 					}
 				});
+		});
+		function humi_mid(){
 				$.ajax({
 					type : 'POST',
-					url : 'shallot_humi.php',								
+					url : 'factory_humi.php',								
 					data: {
 						'from' : U_Mon,
-						'to'   : U_Sun
+						'to'   : U_Sun,
+						'type' : 'C4'
 					},
 					success: function(data) {
 						var sum = 0;
@@ -423,45 +374,11 @@
 						document.getElementById("mid_humi").innerHTML = window.mid.toFixed(2);
 					}
 				});
-				$.ajax({
-					type : 'POST',
-					url : 'shallot_CO2.php',								
-					data: {
-						'from' : U_Mon,
-						'to'   : U_Sun
-					},
-					success: function(data) {
-						var sum = 0;
-						var obj = JSON.parse(data);
-						var size = obj.dataList.length;
-						for(var i in obj.dataList) {
-							sum = sum + obj.dataList[i].value;
-						}
-						mid = sum / size;
-						document.getElementById("mid_CO2").innerHTML = window.mid.toFixed(2);
-					}
-				});
-				$.ajax({
-					type : 'POST',
-					url : 'shallot_light.php',								
-					data: {
-						'from' : U_Mon,
-						'to'   : U_Sun
-					},
-					success: function(data) {
-						var sum = 0;
-						var obj = JSON.parse(data);
-						var size = obj.dataList.length;
-						for(var i in obj.dataList) {
-							sum = sum + obj.dataList[i].value;
-						}
-						mid = sum / size;
-						document.getElementById("mid_light").innerHTML = window.mid.toFixed(2);
-					}
-				});
-		});
+		}
 		</script> 
 		<!--/get the average temperature/humi of this week--> 
+		
+		
           <div class="row">
             <!-- <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="dashboard_graph">
@@ -488,7 +405,7 @@
 			<div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="row x_title">
-                    <h3>Temperature Progress <small>Default Display one day</small></h3>
+                    <h3>Temperature Progress <small>Default Display Twenty Minutes</small></h3>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -510,7 +427,7 @@
 			<div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="row x_title">
-                    <h3>Humidity Progress <small>Default Display one day</small></h3>
+                    <h3>Humidity Progress <small>Default Display Twenty Minutes</small></h3>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -529,72 +446,7 @@
                 </div>
             </div>		
 
-			<div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="row x_title">
-                    <h3>CO2 Progress <small>Default Display one day</small></h3>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                        </ul>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-				   <input type="text" class="pull-right" id="daterange_CO2" name="daterange_CO2" value="06/30/2017 - 01/31/2018" size="27"/> 
-                  <div class="x_content">
-                    <canvas id="CO2_canvas" ></canvas>	
-                  </div>
-                </div>
-            </div>	
 			
-			<div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="row x_title">
-                    <h3>Light Progress <small>Default Display one day</small></h3>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                        </ul>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-				   <input type="text" class="pull-right" id="daterange_light" name="daterange_light" value="06/30/2017 - 01/31/2018" size="27"/> 
-                  <div class="x_content">
-                    <canvas id="light_canvas" ></canvas>	
-                  </div>
-                </div>
-            </div>
-			
-			<div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="row x_title">
-                    <h3>Voltage Progress <small>Default Display one day</small></h3>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                        </ul>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-				   <input type="text" class="pull-right" id="daterange_voltage" name="daterange_voltage" value="06/30/2017 - 01/31/2018" size="27"/> 
-                  <div class="x_content">
-                    <canvas id="voltage_canvas" ></canvas>	
-                  </div>
-                </div>
-            </div>
-
           </div>
 		  
           <br />
@@ -614,55 +466,58 @@
 					format: 'MM/DD/YYYY HH:mm'
 				}
 			});
-			
-			/*default display one week*/
+			/*default display Ten minutes*/
 			$(function(){
-				var toDate = new Date();
-				var toEpoch = toDate.getTime();
-				var fromEpoch = toEpoch - 86400000; 
-				//console.log(fromEpoch);
-				//console.log(toEpoch);
+				<!-- var toDate = new Date(); -->
+				<!-- var toEpoch = toDate.getTime(); -->
+				var toEpoch = 1490544000000;
+				var fromEpoch = toEpoch - 1200000;
+				toEpoch/=1000;
+				fromEpoch/=1000;
 				$.ajax({
 					type : 'POST',
-					url : 'shallot_temp.php',								
+					url : 'factory_temp.php',								
 					data: {
 						'from' : fromEpoch,
-						'to'   : toEpoch
+						'to'   : toEpoch,
+						'type' : 'C4'
 					},
 					success: function(data) {
 						//console.log(data);
-						$.getScript('../build/js/shallot_temp.js', function () {  
+						$.getScript('../build/js/factory_temp.js', function () {  
 						draw(data);
-						}); 
-						default_shallot_humi();
+						});
+						default_temp();
 					}
 					
 				});
 			});
 			
 			/*----------------------*/
+			
 			$('#daterange_temp').on('apply.daterangepicker', function(ev, picker) {
 			    var fromDate = new Date(picker.startDate.format('YYYY-MM-DD HH:mm'));
-				var fromEpoch = fromDate.getTime();
+				var fromEpoch = fromDate.getTime()/1000;
 				var toDate = new Date(picker.endDate.format('YYYY-MM-DD HH:mm'));
-				var toEpoch = toDate.getTime();
+				var toEpoch = toDate.getTime()/1000;
 				$.ajax({
 					type : 'POST',
-					url : 'shallot_temp.php',								
+					url : 'factory_temp.php',								
 					data: {
 						'from' : fromEpoch,
-						'to'   : toEpoch
+						'to'   : toEpoch,
+						'type' : 'C4'
 					},
 					success: function(data) {
 						//console.log(data);
-						$.getScript('../build/js/shallot_temp.js', function () {  
+						$.getScript('../build/js/factory_temp.js', function () {  
 						draw(data);
 						}); 
 					}
 					
 				});
 			 // console.log(picker.startDate.format('YYYY-MM-DD HH:mm'));
-			  //console.log(fromEpoch);
+			 // console.log(fromEpoch);
 			 // console.log(picker.endDate.format('YYYY-MM-DD HH:mm'));
 			  //console.log(toEpoch);
 			  //temp = picker.endDate.format('YYYY-MM-DD HH:mm');*/
@@ -672,7 +527,7 @@
 	
 	<script type="text/javascript">
 		var temp
-		function default_shallot_humi() {
+		function default_temp() {
 			$('input[name="daterange_humi"]').daterangepicker({
 				timePicker: true,
 				timePickerIncrement: 5,
@@ -682,24 +537,30 @@
 			});
 			/*default display one week*/
 			$(function(){
-				var toDate = new Date();
-				var toEpoch = toDate.getTime();
-				var fromEpoch = toEpoch - 86400000; 
+				<!-- var toDate = new Date(); -->
+				<!-- var toEpoch = toDate.getTime(); -->
+				<!-- var fromEpoch = toEpoch - 86400000;  -->
+				var toEpoch = 1490544000000;
+				var fromEpoch = toEpoch - 1200000;
+				toEpoch/=1000;
+				fromEpoch/=1000;
+				//console.log("-------");
 				//console.log(fromEpoch);
 				//console.log(toEpoch);
+				//console.log("-------");
 				$.ajax({
 					type : 'POST',
-					url : 'shallot_humi.php',								
+					url : 'factory_humi.php',								
 					data: {
 						'from' : fromEpoch,
-						'to'   : toEpoch
+						'to'   : toEpoch,
+						'type' : 'C4'
 					},
 					success: function(data) {
 						//console.log(data);
-						$.getScript('../build/js/shallot_humi.js', function () {  
+						$.getScript('../build/js/factory_humi.js', function () {  
 						draw(data);
-						});
-						default_shallot_CO2();
+						}); 
 					}
 					
 				});
@@ -709,19 +570,20 @@
 			
 			$('#daterange_humi').on('apply.daterangepicker', function(ev, picker) {
 			    var fromDate = new Date(picker.startDate.format('YYYY-MM-DD HH:mm'));
-				var fromEpoch = fromDate.getTime();
+				var fromEpoch = fromDate.getTime()/1000;
 				var toDate = new Date(picker.endDate.format('YYYY-MM-DD HH:mm'));
-				var toEpoch = toDate.getTime();
+				var toEpoch = toDate.getTime()/1000;
 				$.ajax({
 					type : 'POST',
-					url : 'shallot_humi.php',
+					url : 'factory_humi.php',								
 					data: {
 						'from' : fromEpoch,
-						'to'   : toEpoch
+						'to'   : toEpoch,
+						'type' : 'C4'
 					},
 					success: function(data) {
-						console.log(data);
-						$.getScript('../build/js/shallot_humi.js', function () {  
+						//console.log(data);
+						$.getScript('../build/js/factory_humi.js', function () {  
 						draw(data);
 						}); 
 					}
@@ -733,203 +595,9 @@
 			  //console.log(toEpoch);
 			  //temp = picker.endDate.format('YYYY-MM-DD HH:mm');*/
 			});
+			
 		};			
     </script> 
-	
-	<script type="text/javascript">
-		var temp
-		function default_shallot_CO2() {
-			$('input[name="daterange_CO2"]').daterangepicker({
-				timePicker: true,
-				timePickerIncrement: 5,
-				locale: {
-					format: 'MM/DD/YYYY HH:mm'
-				}
-			});
-			/*default display one week*/
-			$(function(){
-				var toDate = new Date();
-				var toEpoch = toDate.getTime();
-				var fromEpoch = toEpoch - 86400000; 
-				console.log(fromEpoch);
-				console.log(toEpoch);
-				$.ajax({
-					type : 'POST',
-					url : 'shallot_CO2.php',								
-					data: {
-						'from' : fromEpoch,
-						'to'   : toEpoch
-					},
-					success: function(data) {
-						console.log(data);
-						$.getScript('../build/js/shallot_CO2.js', function () {  
-						draw(data);
-						}); 
-						default_shallot_light();
-					}
-					
-				});
-			});
-			
-			/*----------------------*/
-			$('#daterange_CO2').on('apply.daterangepicker', function(ev, picker) {
-			    var fromDate = new Date(picker.startDate.format('YYYY-MM-DD HH:mm'));
-				var fromEpoch = fromDate.getTime();
-				var toDate = new Date(picker.endDate.format('YYYY-MM-DD HH:mm'));
-				var toEpoch = toDate.getTime();
-				$.ajax({
-					type : 'POST',
-					url : 'shallot_CO2.php',
-					data: {
-						'from' : fromEpoch,
-						'to'   : toEpoch
-					},
-					success: function(data) {
-						console.log(data);
-						$.getScript('../build/js/shallot_CO2.js', function () {  
-						draw(data);
-						}); 
-					}
-					
-				});
-			 // console.log(picker.startDate.format('YYYY-MM-DD HH:mm'));
-			  //console.log(fromEpoch);
-			 // console.log(picker.endDate.format('YYYY-MM-DD HH:mm'));
-			  //console.log(toEpoch);
-			  //temp = picker.endDate.format('YYYY-MM-DD HH:mm');*/
-			});
-		};			
-    </script>
-	
-	
-	<script type="text/javascript">
-		var temp
-		function default_shallot_light() {
-			$('input[name="daterange_light"]').daterangepicker({
-				timePicker: true,
-				timePickerIncrement: 5,
-				locale: {
-					format: 'MM/DD/YYYY HH:mm'
-				}
-			});
-			/*default display one week*/
-			$(function(){
-				var toDate = new Date();
-				var toEpoch = toDate.getTime();
-				var fromEpoch = toEpoch - 86400000; 
-				//console.log(fromEpoch);
-				//console.log(toEpoch);
-				$.ajax({
-					type : 'POST',
-					url : 'shallot_light.php',								
-					data: {
-						'from' : fromEpoch,
-						'to'   : toEpoch
-					},
-					success: function(data) {
-						//console.log(data);
-						$.getScript('../build/js/shallot_light.js', function () {  
-						draw(data);
-						}); 
-						default_shallot_voltage();
-					}
-					
-				});
-			});
-			
-			/*----------------------*/
-			$('#daterange_light').on('apply.daterangepicker', function(ev, picker) {
-			    var fromDate = new Date(picker.startDate.format('YYYY-MM-DD HH:mm'));
-				var fromEpoch = fromDate.getTime();
-				var toDate = new Date(picker.endDate.format('YYYY-MM-DD HH:mm'));
-				var toEpoch = toDate.getTime();
-				$.ajax({
-					type : 'POST',
-					url : 'shallot_light.php',
-					data: {
-						'from' : fromEpoch,
-						'to'   : toEpoch
-					},
-					success: function(data) {
-						//console.log(data);
-						$.getScript('../build/js/shallot_light.js', function () {  
-						draw(data);
-						}); 
-					}
-					
-				});
-			 // console.log(picker.startDate.format('YYYY-MM-DD HH:mm'));
-			  //console.log(fromEpoch);
-			 // console.log(picker.endDate.format('YYYY-MM-DD HH:mm'));
-			  //console.log(toEpoch);
-			  //temp = picker.endDate.format('YYYY-MM-DD HH:mm');*/
-			});
-		};			
-    </script>
-	
-		<script type="text/javascript">
-		var temp
-		function default_shallot_voltage() {
-			$('input[name="daterange_voltage"]').daterangepicker({
-				timePicker: true,
-				timePickerIncrement: 5,
-				locale: {
-					format: 'MM/DD/YYYY HH:mm'
-				}
-			});
-			/*default display one week*/
-			$(function(){
-				var toDate = new Date();
-				var toEpoch = toDate.getTime();
-				var fromEpoch = toEpoch - 86400000; 
-				//console.log(fromEpoch);
-				//console.log(toEpoch);
-				$.ajax({
-					type : 'POST',
-					url : 'shallot_voltage.php',								
-					data: {
-						'from' : fromEpoch,
-						'to'   : toEpoch
-					},
-					success: function(data) {
-						//console.log(data);
-						$.getScript('../build/js/shallot_voltage.js', function () {  
-						draw(data);
-						}); 
-					}
-					
-				});
-			});
-			
-			/*----------------------*/
-			$('#daterange_light').on('apply.daterangepicker', function(ev, picker) {
-			    var fromDate = new Date(picker.startDate.format('YYYY-MM-DD HH:mm'));
-				var fromEpoch = fromDate.getTime();
-				var toDate = new Date(picker.endDate.format('YYYY-MM-DD HH:mm'));
-				var toEpoch = toDate.getTime();
-				$.ajax({
-					type : 'POST',
-					url : 'shallot_voltage.php',
-					data: {
-						'from' : fromEpoch,
-						'to'   : toEpoch
-					},
-					success: function(data) {
-						//console.log(data);
-						$.getScript('../build/js/shallot_voltage.js', function () {  
-						draw(data);
-						}); 
-					}
-					
-				});
-			 // console.log(picker.startDate.format('YYYY-MM-DD HH:mm'));
-			  //console.log(fromEpoch);
-			 // console.log(picker.endDate.format('YYYY-MM-DD HH:mm'));
-			  //console.log(toEpoch);
-			  //temp = picker.endDate.format('YYYY-MM-DD HH:mm');*/
-			});
-		};			
-    </script>
 	
     <!-- jQuery -->
     <!-- Bootstrap -->
@@ -971,10 +639,8 @@
     <!-- Custom Theme Scripts -->
 	<script src="../build/js/custom.js"></script>
 	<!--For Test use -->
-	<script src="../build/js/shallot_temp.js"></script>
-	<script src="../build/js/shallot_humi.js"></script>
-	<script src="../build/js/shallot_CO2.js"></script>
-	<script src="../build/js/shallot_light.js"></script>
+	<script src="../build/js/factory_temp.js"></script>
+	<script src="../build/js/factory_humi.js"></script>
   </body>
 		
 </html>
